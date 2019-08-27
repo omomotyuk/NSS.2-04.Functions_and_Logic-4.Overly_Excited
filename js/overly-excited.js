@@ -7,9 +7,7 @@ Create an addExcitement function that should console.log() rows of words. It sho
 let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
 
 /*
-    The addExcitement function should be an impure function, and accept
-    the array as the sole argument. It should iterate over the array
-    and output the words to the browser console.
+    The addExcitement function should be an impure function, and accept the array as the sole argument. It should iterate over the array and output the words to the browser console.
 */
 function addExcitement (theWordArray) {
 
@@ -18,7 +16,13 @@ function addExcitement (theWordArray) {
 
     for (let i = 0; i < theWordArray.length; i++) {
         // Concatenate the new word onto buildMeUp
-        buildMeUp+= " " + theWordArray[i];
+        buildMeUp += " " + theWordArray[i];
+
+        /* Add logic to addExcitement that places an exclamation point (!) after every third word. Read the following English statement and write the equivalent in JavaSript code to make it work.
+        */
+        if ( (i + 1) % 3 === 0 ) {
+            buildMeUp += "!";
+        }
 
         // Print buildMeUp to the console
         console.log( buildMeUp );
