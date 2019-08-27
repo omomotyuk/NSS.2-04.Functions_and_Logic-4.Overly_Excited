@@ -10,7 +10,10 @@ let sentence = ["The","walrus","danced","through","the","trees","in","the","ligh
 // The addExcitement function should be an impure function, and accept the array as the sole argument. It should iterate over the array and output the words to the browser console.
 */
 
-function addExcitement (theWordArray, characterArg, timesArg ) {
+// Watch the video (see above) about arrow functions, and see if you can rewrite addExcitement using that syntax.
+console.log( "Arrow Functions");
+
+let addExcitement = (theWordArray, characterArg, timesArg ) => {
     // Each time the for loop executes, you're going to add one more word to this string
     let buildMeUp = ""
 
