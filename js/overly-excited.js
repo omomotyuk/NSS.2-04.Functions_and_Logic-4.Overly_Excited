@@ -10,7 +10,7 @@ let sentence = ["The","walrus","danced","through","the","trees","in","the","ligh
 // The addExcitement function should be an impure function, and accept the array as the sole argument. It should iterate over the array and output the words to the browser console.
 */
 
-function addExcitement (theWordArray, characterArg ) {
+function addExcitement (theWordArray, characterArg, timesArg ) {
     // Each time the for loop executes, you're going to add one more word to this string
     let buildMeUp = ""
 
@@ -24,8 +24,15 @@ function addExcitement (theWordArray, characterArg ) {
         /*
         // Add a new argument to the function so that a developer can specify which character should be displayed instead of it always being an exclamation point.
         */
+        /*
+        // Add a new argument to the function so that a developer can specify how many times the special character should be added.
+        */
         if ( (i + 1) % 3 === 0 ) {
-            buildMeUp += characterArg ;
+            let m = timesArg;
+            while( m > 0 ) {
+                buildMeUp += characterArg;
+                m--;
+            }
         }
 
         // Print buildMeUp to the console
@@ -35,4 +42,4 @@ function addExcitement (theWordArray, characterArg ) {
 
 // Invoke the function and pass in the array
 // I want to use a question mark
-addExcitement(sentence, "?");
+addExcitement(sentence, "?", 4 );
